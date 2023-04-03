@@ -1,0 +1,22 @@
+<%- include('partials/header') %>
+
+<div class="blog-content">
+  <h1>Home</h1>
+  <div class="home-blurb">
+    <p><%= homeStartingContent %></p>
+  </div>
+
+
+  <% posts.forEach(function(post){ %>
+  <div class="blogPosts">
+    <h2 class='blog-link blog-nav'><a href='/posts/<%=post._id%>'>
+        <%= post.title %>
+      </a></h2>
+    <p> <%= post.content.slice(0, 200) %>..... </p>  
+    </p>
+  </div>
+  <%});%>
+
+</div>
+
+<%- include('partials/footer') %>
